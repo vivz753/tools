@@ -1,5 +1,8 @@
+# Make a symlink from [GIT] ~/dev/vivz753/i3/config to [LOCAL] /etc/regolith/i3/config
+# EXAMPLE: `ln -s ~/dev/vivz753/i3/config /etc/regolith/i3/config`
+ 
 # i3 config file (v4) for Regolith Desktop Environment
-# Store this file in /etc/regolith/i3/config when using Linux Ubuntu
+#
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # This defines which key super maps to on your keyboard.  
@@ -16,7 +19,21 @@ set $compton_config /etc/regolith/compton/config
 # path to terminal. Override this to specify a custom terminal.
 set $terminal_path /usr/bin/st
 
-# Color values are defined in ~/.Xresources-regolith
+set $mode_system (l) lock, (e) logout, (s) suspend, (r) reboot, (p) power-off
+mode "$mode_system" {
+	bindsym e /usr/bin/gnome-session-quit --logout, mode "default"
+	bindsym r /usr/bin/gnome-session-quit --reboot, mode "default"
+	bindsym p exec /usr/bin/gnome-session-quit --power-off, mode "default"
+	bindsym l exec gnome-screensaver-command --lock, mode "default"
+	bindsym s exec systemctl suspend, mode "default"
+	
+	#back to normal: Enter or Esc
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
+bindsym $mod+Escape mode "$mode_system"
+
+	# Color values are defined in ~/.Xresources-regolith
 # These are the labels which define each i3 workspace.
 set_from_resource $ws1  i3-wm.workspace.01.name "1"
 set_from_resource $ws2  i3-wm.workspace.02.name "2"
@@ -47,7 +64,8 @@ hide_edge_borders smart
 bindsym $mod+Return exec $terminal_path
 
 # start a web browser
-bindsym $mod+Shift+Return exec opera 
+# // replace sensible-browser w/ opera if default doesn't work
+bindsym $mod+Shift+Return exec /usr/bin/sensible-browser
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -175,21 +193,6 @@ bindsym $mod+Shift+c reload
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-
-# Logout of session
-bindsym $mod+Shift+e exec /usr/bin/gnome-session-quit --logout
-
-# Reboot computer
-bindsym $mod+Shift+b exec /usr/bin/gnome-session-quit --reboot
-
-# Power off computer
-bindsym $mod+Shift+p exec /usr/bin/gnome-session-quit --power-off
-
-# lock the screen
-bindsym $mod+Escape exec gnome-screensaver-command --lock
-
-# put the system to sleep
-bindsym $mod+Shift+s exec systemctl suspend
 
 # shortcuts for common system configuration tasks
 bindsym $mod+c exec gnome-control-center
