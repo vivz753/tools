@@ -22,6 +22,7 @@ alias vivz753="cd ~/dev/vivz753"
 #file access
 alias bashrc="vim ~/.bashrc"
 alias i3config="sudo vim /etc/regolith/i3/config"
+alias sshconfig="vi ~/.ssh/config"
 
 #dev shortcuts
 alias getid="uuidgen | tr  '[:lower:]-' '[:upper:]_'"
