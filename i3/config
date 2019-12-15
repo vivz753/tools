@@ -19,6 +19,23 @@ set $compton_config /etc/regolith/compton/config
 # path to terminal. Override this to specify a custom terminal.
 set $terminal_path /usr/bin/st
 
+# shortcuts for common system configuration tasks
+set $mode_settings (c) control center, (w) wifi, (b) bluetooth, (d) display, (n) network, (p) power, (s) sound
+mode "$mode_settings" {
+
+	bindsym c exec gnome-control-center, mode "default"
+	bindsym w exec gnome-control-center wifi, mode "default"
+	bindsym b exec gnome-control-center bluetooth, mode "default"
+	bindsym d exec gnome-control-center display, mode "default"
+	bindsym n exec gnome-control-center network, mode "default"
+	bindsym p exec gnome-control-center power, mode "default"
+	bindsym s exec gnome-control-center sound, mode "default"
+
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
+bindsym $mod+S mode "$mode_settings"
+
 set $mode_system (l) lock, (e) logout, (s) suspend, (r) reboot, (p) power-off
 mode "$mode_system" {
 	bindsym e /usr/bin/gnome-session-quit --logout, mode "default"
@@ -194,14 +211,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
-# shortcuts for common system configuration tasks
-bindsym $mod+c exec gnome-control-center
-bindsym $mod+w exec gnome-control-center wifi
-bindsym $mod+b exec gnome-control-center bluetooth
-bindsym $mod+d exec gnome-control-center display
-bindsym $mod+n exec gnome-control-center network
-bindsym $mod+p exec gnome-control-center power
-bindsym $mod+s exec gnome-control-center sound
+
 
 # resize window (you can also use the mouse for that)
 mode "Resize Mode" {
