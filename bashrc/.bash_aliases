@@ -62,6 +62,8 @@ alias ga='git add'
 alias gpum='git pull upstream master'
 alias grhh='git reset HEAD --hard'
 alias grhs='git reset HEAD --soft'
+alias grv='git remote -v'
+alias grsurl='git remote set-url'
 
 #AURIS ONLY
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote-01'
