@@ -1,6 +1,19 @@
 #Make a symlink from [GIT] ~/dev/vivz753/bashrc/.bashrc to [LOCAL] ~/.bashrc
 # EXAMPLE: `ln -s ~/dev/vivz753/tools/bashrc/.bashrc ~/.bashrc`
 
+function sshgen {
+	if (("$#" != 2))
+then
+	echo "When creating an ssh key, please include a keyword to append as the 1st argument, then provide the file name of the rsa you wish to create as the 2nd argument."
+fi
+
+if (("$#" == 2))
+then
+	ssh-keygen -t rsa -C "$1" -f ~/.ssh/"$2" -N ""
+fi
+}
+
+
 #variables
 CORES="`nproc --all`"
 UUID="`uuidgen | tr  '[:lower:]-' '[:upper:]_'`"
@@ -18,11 +31,13 @@ alias l="'ls -CF"
 alias test3='make -j`nproc --all` install'
 
 #directories
+alias .ssh="cd ~/.ssh"
 alias dev="cd ~/dev"
 alias auris="cd ~/dev/auris"
 alias vivz753="cd ~/dev/vivz753"
 
 #file access
+alias basha="vim ~/.bash_aliases"
 alias bashrc="vim ~/.bashrc"
 alias i3config="sudo vim /etc/regolith/i3/config"
 alias sshconfig="vi ~/.ssh/config"
