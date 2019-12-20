@@ -38,8 +38,8 @@ bindsym $mod+S mode "$mode_settings"
 
 set $mode_system (l) lock, (e) logout, (s) suspend, (r) reboot, (p) power-off
 mode "$mode_system" {
-	bindsym e /usr/bin/gnome-session-quit --logout, mode "default"
-	bindsym r /usr/bin/gnome-session-quit --reboot, mode "default"
+	bindsym e exec /usr/bin/gnome-session-quit --logout, mode "default"
+	bindsym r exec /usr/bin/gnome-session-quit --reboot, mode "default"
 	bindsym p exec /usr/bin/gnome-session-quit --power-off, mode "default"
 	bindsym l exec gnome-screensaver-command --lock, mode "default"
 	bindsym s exec systemctl suspend, mode "default"
