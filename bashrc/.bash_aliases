@@ -46,7 +46,7 @@ alias sshconfig="vi ~/.ssh/config"
 alias getid="uuidgen | tr  '[:lower:]-' '[:upper:]_'"
 
 #git shortcuts
-alias gc='git clean'
+alias gcdm='git checkout develop-monarch'
 alias gl='git lg'
 alias gr='git rebase'
 alias gs='git status'
