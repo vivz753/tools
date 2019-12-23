@@ -82,7 +82,7 @@ bindsym $mod+Return exec $terminal_path
 
 # start a web browser
 # // replace sensible-browser w/ opera if default doesn't work
-bindsym $mod+Shift+Return exec /usr/bin/sensible-browser
+bindsym $mod+Shift+Return exec opera
 
 # kill focused window
 bindsym $mod+Shift+q kill
