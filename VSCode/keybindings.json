@@ -1,6 +1,17 @@
-// To enable these keybindings, place this file in ~/.config/Code/User/keybindings.json
-// Or copy them to your existing ~/.config/Code/User/keybindings.json
-[
+
+mmand": "workbench.action.tasks.runTask",
+        "args": "Run Uro"
+    },
+    {
+        "key": "ctrl+shift+r b",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Run Bronch"
+    },
+    {
+        "key": "ctrl+shift+r c",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Run CartUI Uro"
+    },
     {
         "key": "ctrl+f7",
         "command": "workbench.action.tasks.runTask",
@@ -125,5 +136,89 @@
     {
         "key": "ctrl+k up",
         "command": "-workbench.action.moveActiveEditorGroupUp"
-    }
+    },
+    {
+        "key": "ctrl+r",
+        "command": "workbench.files.action.refreshFilesExplorer"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "git.refresh"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.reloadWindow",
+        "when": "isDevelopment"
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "-editor.action.selectHighlights",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "-addCursorsAtSearchResults",
+        "when": "fileMatchOrMatchFocus && searchViewletVisible"
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "search.action.focusSearchList"
+    },
+    {
+        "key": "alt+n",
+        "command": "search.action.focusNextSearchResult",
+        "when": "hasSearchResult"
+    },
+    {
+        "key": "f4",
+        "command": "-search.action.focusNextSearchResult",
+        "when": "hasSearchResult"
+    },
+    {
+        "key": "shift+alt+n",
+        "command": "search.action.focusPreviousSearchResult",
+        "when": "hasSearchResult"
+    },
+    {
+        "key": "shift+f4",
+        "command": "-search.action.focusPreviousSearchResult",
+        "when": "hasSearchResult"
+    },
+    {
+        "key": "ctrl+shift+enter",
+        "command": "-editor.action.insertLineBefore",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+shift+enter",
+        "command": "-search.action.replaceAllInFile",
+        "when": "fileMatchFocus && replaceActive && searchViewletVisible"
+    },
+    {
+        "key": "ctrl+shift+enter",
+        "command": "-search.action.replaceAllInFolder",
+        "when": "folderMatchFocus && replaceActive && searchViewletVisible"
+    },
+    {
+        "key": "ctrl+shift+enter",
+        "command": "workbench.files.action.collapseExplorerFolders"
+    },
+    {
+        "key": "shift+alt+enter",
+        "command": "search.action.collapseSearchResults"
+    },
+    {
+        "key": "ctrl+o",
+        "command": "-workbench.action.files.openFile"
+    },
+    {
+        "key": "ctrl+o",
+        "command": "-workbench.action.files.openLocalFile",
+        "when": "remoteFileDialogVisible"
+    },
+    {
+        "key": "ctrl+o",
+        "command": "editor.action.insertLineBefore"
+    },
+
 ]
