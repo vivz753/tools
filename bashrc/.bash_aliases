@@ -4,7 +4,7 @@
 function sshgen {
 	if (("$#" != 2))
 then
-	echo "When creating an ssh key, please include a keyword to append as the 1st argument, then provide the file name of the rsa you wish to create as the 2nd argument."
+	echo "When creating an ssh key, please include a keyword (like an email) to append as the 1st argument, then provide the file name you wish to create as the 2nd argument."
 fi
 
 if (("$#" == 2))
@@ -26,6 +26,7 @@ alias link="ln -s"
 alias ll="ls -alF"
 alias la="ls -A"
 alias l="'ls -CF"
+alias grep='grep --color=auto --exclude-dir=\.svn'
 
 #for reference on how to use backticks for dynamic commands
 alias test3='make -j`nproc --all` install'
