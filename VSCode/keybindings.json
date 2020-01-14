@@ -1,5 +1,9 @@
-
-mmand": "workbench.action.tasks.runTask",
+// To enable these keybindings, place this file in ~/.config/Code/User/keybindings.json
+// Or copy them to your existing ~/.config/Code/User/keybindings.json
+[    
+    {
+        "key": "ctrl+shift+r u",
+        "command": "workbench.action.tasks.runTask",
         "args": "Run Uro"
     },
     {
