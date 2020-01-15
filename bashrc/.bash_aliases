@@ -4,7 +4,7 @@
 function sshgen {
 	if (("$#" != 2))
 then
-	echo "When creating an ssh key, please include a keyword (like an email) to append as the 1st argument, then provide the file name you wish to create as the 2nd argument."
+	echo "When creating an ssh key, please include a keyword (i like to use my email) to append to the end of the ssh key as the 1st argument, then provide the file name (i.e. vivz753_git_rsa) you wish to create as the 2nd argument"
 fi
 
 if (("$#" == 2))
@@ -13,6 +13,17 @@ then
 fi
 }
 
+function findme {
+	if (("$#" !=2))
+then 
+	echo "Please provide the destination you wish to search in as the 1st argument ("." for current directory, "/" for the entire computer, " /" for the current user directory only), along with the name of the file/directory you wish to search for (this command will find any file/directory name that matches or contains the searched name)"
+fi
+
+if (("$#" == 2))
+then
+	find "$1" -name "*$2*" 
+fi 
+}
 
 #variables
 CORES="`nproc --all`"
