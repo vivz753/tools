@@ -1,5 +1,6 @@
 # Make a symlink from [GIT] ~/dev/vivz753/i3/config to [LOCAL] /etc/regolith/i3/config
-# EXAMPLE: `ln -s ~/dev/vivz753/i3/config /etc/regolith/i3/config`
+# EXAMPLE: `sudo ln -s ~/dev/vivz753/i3/config /etc/regolith/i3/config`
+# NOTE: delete the original config first `sudo rm /etc/regolith/i3/config`
  
 # i3 config file (v4) for Regolith Desktop Environment
 #
