@@ -45,7 +45,6 @@ alias test3='make -j`nproc --all` install'
 #directories
 alias .ssh="cd ~/.ssh"
 alias dev="cd ~/dev"
-alias auris="cd ~/dev/auris"
 alias vivz753="cd ~/dev/vivz753"
 
 #file access
