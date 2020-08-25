@@ -1,5 +1,5 @@
-#Make a symlink from [GIT] ~/dev/vivz753/bashrc/.bashrc to [LOCAL] ~/.bashrc
-# EXAMPLE: `ln -s ~/dev/vivz753/tools/bashrc/.bashrc ~/.bashrc`
+#Make a symlink from [GIT] ~/dev/vivz753/Linux/bashrc/.bashrc to [LOCAL] ~/.bashrc
+# EXAMPLE: `ln -s ~/dev/vivz753/tools/Linux/bashrc/.bashrc ~/.bashrc`
 
 function sshgen {
 	if (("$#" != 2))
