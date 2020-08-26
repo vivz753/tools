@@ -5,6 +5,7 @@
 # Make a symlink from [GIT] ~/dev/vivz753/tools/MacOS/bash_profile/.bashprofile to [LOCAL] ~/.bash_profile
 # EXAMPLE: `ln -s ~/dev/vivz753/tools/MacOS/bash_profile/.bash_profile ~/.bash_profile`
 
+# Generate a ssh key in ~/.ssh
 function sshgen {
 	if (($# != 2))
 then
@@ -17,16 +18,35 @@ then
 fi
 }
 
-function findme {
+# Find file/folder
+function ff {
 	if (($# !=2))
 then 
-	echo "Please provide the destination you wish to search in as the 1st argument ("." for current directory, "/" for the entire computer, " /" for the current user directory only), along with the name of the file/directory you wish to search for (this command will find any file/directory name that matches or contains the searched name)"
+	echo "Please provide the destination you wish to search in as the 1st argument ("." for current directory, "/" for the entire drive, " /" for the current user directory only), along with the name of the file/directory you wish to search for" 
+
+	echo "ff command will find all files/directories that match or contain the searched name)"
 fi
 
 if (($# == 2))
 then
-	find "$1" -name "*$2*" 
+	find "$1" -name "*$2*" | grep "$2" 
 fi 
+}
+
+# Find file with text
+function ffwt {
+	if (($#!=2))
+then
+	echo "Please provide the destination you wish to search in as the 1st argument ("." for the current directory, "/" for the entire drive, " /" for the current user directory only), along with the text expression you wish to search for."
+
+	echo "ffwt command will find all files containing the text expression"
+fi
+
+if (($# == 2))
+then
+	echo "File(s) containing expression \"$2\""
+	grep -lr "$2" "$1" -s
+fi
 }
 
 #variables
