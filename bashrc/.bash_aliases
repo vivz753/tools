@@ -1,6 +1,17 @@
 #Make a symlink from [GIT] ~/dev/vivz753/bashrc/.bashrc to [LOCAL] ~/.bashrc
 # EXAMPLE: `ln -s ~/dev/vivz753/tools/bashrc/.bashrc ~/.bashrc`
 
+function listpkg {
+if (("$#" !=1))
+  then
+    echo "Please provide the argument(s): 1) the string relevant to the name of the apt-get package you are looking for"
+  fi
+if (("$#" ==1))
+  then
+  apt list --installed | grep $1
+fi
+}
+
 function sshgen {
 	if (("$#" != 2))
 then
@@ -25,6 +36,17 @@ then
 fi 
 }
 
+function findmatches {
+  if (("$#" !=2))
+  then
+    echo -e "Please provide 2 arguments: \n  1) the destination you wish to search in (i.e. "." for current directory, "/" for the entire computer, " /" for the current user directory only) \n  2) the string you wish to search for \nThis function will list all the files that contain the string match(es)"
+  fi
+
+  if (("$#" == 2))
+  then
+    find "$1" -exec grep -ls "$2" {} \;
+  fi
+}
 #variables
 CORES="`nproc --all`"
 UUID="`uuidgen | tr  '[:lower:]-' '[:upper:]_'`"
