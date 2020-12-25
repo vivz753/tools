@@ -15,6 +15,18 @@ fi
 if (($# == 2))
 then
 	ssh-keygen -t rsa -C "$1" -f ~/.ssh/"$2" -N ""
+
+	echo "\n Follow the instructions below to integrate with Git: \n"
+	echo "1. Copy paste the SSH key, print the public key with this command"
+	echo "   cat ~/.ssh/"$2".pub"
+	echo "\n2. Run this command to add the SSH key to SSH agent"
+	echo "   ssh-add -K ~/.ssh/"$2""
+	echo "\n3. Add this to ~/.ssh/config \n"
+	echo "Host *"
+	echo "  AddKeysToAgent yes"
+	echo "  Identity File ~/.ssh/"$2""
+	echo
+	
 fi
 }
 
@@ -100,4 +112,3 @@ alias grv='git remote -v'
 alias grsurl='git remote set-url'
 
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote-01'
-
