@@ -1,0 +1,43 @@
+# for future reference guide
+
+function intra ()
+    {
+            echo "Please provide the argument(s): 1) u for uro, b for bronch";
+        fi;
+        if (("$#" ==1)); then
+            if [ "$1" == "u" ]; then
+                echo "Running IntraOpNavigation Uro...";
+                `intrauro`;
+            fi;
+            if [ "$1" == "b" ]; then
+                echo "Running IntraOpNavigation Bronch...";
+                `intrabro`;
+            fi;
+            if [ "$1" != "u" ] && [ "$1" != "b" ]; then
+                echo "Invalid argument! Must use u for uro or b for bronch";
+            fi;
+        fi
+    }
+
+setdir ()
+{
+    if [ $1 ] && [ -z $2 ]; then
+        setvar DIR $1;
+        refreshdir;
+        return 0;
+    else
+        echo 'setdir(): to set the DIR, provide the args 1) directory/path';
+        return 1;
+    fi
+}
+setvar ()
+{
+    if [ $1 ] && [ -z $3 ]; then
+        eval 'export $1=$2';
+        return 0;
+    else
+        echo 'setvar(): to set a environment variable, provide the args 1) variableName 2) val
+        return 1;
+    fi
+}
+

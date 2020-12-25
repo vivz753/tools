@@ -1,5 +1,20 @@
-#Make a symlink from [GIT] ~/dev/vivz753/Linux/bashrc/.bashrc to [LOCAL] ~/.bashrc
+# For Linux ONLY
+# By Vivian Leung
+# Created 2019
+
+# Make a symlink from [GIT] ~/dev/vivz753/tools/Linux/bashrc/.bashrc to [LOCAL] ~/.bashrc
 # EXAMPLE: `ln -s ~/dev/vivz753/tools/Linux/bashrc/.bashrc ~/.bashrc`
+
+function listpkg {
+if (("$#" !=1))
+  then
+    echo "Please provide the argument(s): 1) the string relevant to the name of the apt-get package you are looking for"
+  fi
+if (("$#" ==1))
+  then
+  apt list --installed | grep $1
+fi
+}
 
 function sshgen {
 	if (("$#" != 2))
@@ -13,17 +28,35 @@ then
 fi
 }
 
-function findme {
-	if (("$#" !=2))
-then 
-	echo "Please provide the destination you wish to search in as the 1st argument ("." for current directory, "/" for the entire computer, " /" for the current user directory only), along with the name of the file/directory you wish to search for (this command will find any file/directory name that matches or contains the searched name)"
-fi
+# Find file/folder
+function ff {
+    if (($# !=2))
+    then
+        echo "Please provide the destination you wish to search in as the 1st argument ("." for current directory, "/" for the entire drive, " /" for the current user directory only), along with the name of the file/directory you wish to search for"
 
-if (("$#" == 2))
-then
-	find "$1" -name "*$2*" 
-fi 
+        echo "ff command will find all files/directories that match or contain the searched name"
+    fi
+
+    if (($# == 2))
+    then
+       find "$1" -name "*$2*" | grep "$2"
+    fi
 }
+
+# Find file with text
+function ffwt {
+    if (($#!=2))
+    then
+       echo "Please provide the destination you wish to search in as the 1st argument ("." for the current directory, "/" for the entire drive, " /" for the current user directory only), along with the text expression you wish to search for." echo "ffwt command will find all files containing the text expression"
+    fi
+
+    if (($# == 2))
+    then
+       echo "File(s) containing expression \"$2\""
+       grep -lr "$2" "$1" -s
+    fi
+}
+
 
 #variables
 CORES="`nproc --all`"
@@ -45,7 +78,6 @@ alias test3='make -j`nproc --all` install'
 #directories
 alias .ssh="cd ~/.ssh"
 alias dev="cd ~/dev"
-alias auris="cd ~/dev/auris"
 alias vivz753="cd ~/dev/vivz753"
 
 #file access
@@ -79,4 +111,3 @@ alias grsurl='git remote set-url'
 
 #AURIS ONLY
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote-01'
-
