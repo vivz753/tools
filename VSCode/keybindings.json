@@ -2,21 +2,6 @@
 // Or copy them to your existing ~/.config/Code/User/keybindings.json
 [    
     {
-        "key": "ctrl+shift+r u",
-        "command": "workbench.action.tasks.runTask",
-        "args": "Run Uro"
-    },
-    {
-        "key": "ctrl+shift+r b",
-        "command": "workbench.action.tasks.runTask",
-        "args": "Run Bronch"
-    },
-    {
-        "key": "ctrl+shift+r c",
-        "command": "workbench.action.tasks.runTask",
-        "args": "Run CartUI Uro"
-    },
-    {
         "key": "ctrl+f7",
         "command": "workbench.action.tasks.runTask",
         "args": "Compile Current File"
