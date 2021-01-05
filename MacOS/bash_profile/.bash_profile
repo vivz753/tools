@@ -5,6 +5,9 @@
 # Make a symlink from [GIT] ~/dev/vivz753/tools/MacOS/bash_profile/.bashprofile to [LOCAL] ~/.bash_profile
 # EXAMPLE: `ln -s ~/dev/vivz753/tools/MacOS/bash_profile/.bash_profile ~/.bash_profile`
 
+# temporary use for AWS credentials
+export AWS_PROFILE=claudia
+
 # Generate a ssh key in ~/.ssh
 function sshgen {
 	if (($# != 2))
@@ -83,6 +86,9 @@ alias vivz753="cd ~/dev/vivz753"
 alias tools="cd ~/dev/vivz753/tools"
 alias cghw="cd ~/dev/vivz753/ComputerGraphics/CSE167X"
 alias portfolio="cd ~/dev/vivz753/vivian-portfolio"
+alias av="cd ~/dev/vivz753/av"
+alias avb="cd ~/dev/vivz753/av/autoviseai-nodejs-api"
+alias avf="cd ~/dev/vivz753/av/autoviseai"
 
 #file access
 alias bashp="vim ~/.bash_profile"
