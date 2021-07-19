@@ -113,7 +113,6 @@ alias sshconfig="vi ~/.ssh/config"
 alias getid="uuidgen | tr  '[:lower:]-' '[:upper:]_'"
 
 #git shortcuts
-alias gcdm='git checkout develop-monarch'
 alias gl='git lg'
 alias gr='git rebase'
 alias gs='git status'
@@ -126,11 +125,12 @@ alias gcm='git commit -m'
 alias gp='git push'
 alias ga.='git add .'
 alias ga='git add'
-alias gpum='git pull upstream master'
+alias gpum='git pull upstream main'
 alias grhh='git reset HEAD --hard'
 alias grhs='git reset HEAD --soft'
 alias grv='git remote -v'
 alias grsurl='git remote set-url'
+alias gpsup='git push --set-upstream origin $(git_current_branch)'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
