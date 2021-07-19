@@ -5,9 +5,6 @@
 # Make a symlink from [GIT] ~/dev/vivz753/tools/MacOS/bash_profile/.bashprofile to [LOCAL] ~/.bash_profile
 # EXAMPLE: `ln -s ~/dev/vivz753/tools/MacOS/bash_profile/.bash_profile ~/.bash_profile`
 
-# temporary use for AWS credentials
-export AWS_PROFILE=claudia
-
 # Generate a ssh key in ~/.ssh
 function sshgen {
 	if (($# != 2))
@@ -85,10 +82,14 @@ alias dev="cd ~/dev"
 alias vivz753="cd ~/dev/vivz753"
 alias tools="cd ~/dev/vivz753/tools"
 alias cghw="cd ~/dev/vivz753/ComputerGraphics/CSE167X"
-alias portfolio="cd ~/dev/vivz753/vivian-portfolio"
-alias av="cd ~/dev/vivz753/av"
-alias avb="cd ~/dev/vivz753/av/autoviseai-nodejs-api"
-alias avf="cd ~/dev/vivz753/av/autoviseai"
+alias vus="cd ~/dev/vivz753/vleung.us"
+alias vxyz="cd ~/dev/vivz753/vleung.xyz"
+alias av="cd ~/dev/av"
+alias avb="cd ~/dev/av/nodejs-server"
+alias avf="cd ~/dev/av/gatsby-client"
+alias pom="cd ~/dev/pom"
+alias inf="cd ~/dev/infor"
+alias ewc="cd ~/dev/infor/enterprise-wc"
 
 #file access
 alias bashp="vim ~/.bash_profile"
@@ -118,3 +119,7 @@ alias grv='git remote -v'
 alias grsurl='git remote set-url'
 
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote-01'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
