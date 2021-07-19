@@ -16,15 +16,29 @@ if (($# == 2))
 then
 	ssh-keygen -t rsa -C "$1" -f ~/.ssh/"$2" -N ""
 
-	echo "\n Follow the instructions below to integrate with Git: \n"
+	echo
+	echo "**************************************************************************"
+	echo "*									 *"
+	echo "*	(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ -- written by vivian leung  -- *:･ﾟ✧\(◕ヮ◕\) 	 *"
+	echo "*		source code: https://github.com/vivz753		 	 *"
+	echo "*									 *"
+	echo "**************************************************************************"
+	echo
+	echo "Follow the instructions below to integrate with Git:"
+	echo
 	echo "1. Copy paste the SSH key, print the public key with this command"
+	echo
 	echo "   cat ~/.ssh/"$2".pub"
-	echo "\n2. Run this command to add the SSH key to SSH agent"
+	echo
+	echo "2. Run this command to add the SSH key to SSH agent"
+	echo
 	echo "   ssh-add -K ~/.ssh/"$2""
-	echo "\n3. Add this to ~/.ssh/config \n"
-	echo "Host *"
-	echo "  AddKeysToAgent yes"
-	echo "  Identity File ~/.ssh/"$2""
+	echo
+	echo "3. (This step might not be needed; I had to remove the config file for it to work, for some reason) Add this to ~/.ssh/config "
+	echo
+	echo "	Host *"
+	echo "  	AddKeysToAgent yes"
+	echo "  	Identity File ~/.ssh/"$2""
 	echo
 	
 fi
@@ -92,7 +106,7 @@ alias inf="cd ~/dev/infor"
 alias ewc="cd ~/dev/infor/enterprise-wc"
 
 #file access
-alias bashp="vim ~/.bash_profile"
+alias bashp="vi ~/.bash_profile"
 alias sshconfig="vi ~/.ssh/config"
 
 #dev shortcuts
@@ -117,8 +131,6 @@ alias grhh='git reset HEAD --hard'
 alias grhs='git reset HEAD --soft'
 alias grv='git remote -v'
 alias grsurl='git remote set-url'
-
-export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote-01'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
