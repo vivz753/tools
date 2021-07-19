@@ -34,7 +34,7 @@ then
 	echo
 	echo "   ssh-add -K ~/.ssh/"$2""
 	echo
-	echo "3. Add this to ~/.ssh/config "
+	echo "3. (This step might not be needed; I had to remove the config file for it to work, for some reason) Add this to ~/.ssh/config "
 	echo
 	echo "	Host *"
 	echo "  	AddKeysToAgent yes"
