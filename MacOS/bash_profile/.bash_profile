@@ -16,15 +16,29 @@ if (($# == 2))
 then
 	ssh-keygen -t rsa -C "$1" -f ~/.ssh/"$2" -N ""
 
-	echo "\n Follow the instructions below to integrate with Git: \n"
+	echo
+	echo "**************************************************************************"
+	echo "*									 *"
+	echo "*	(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ -- written by vivian leung  -- *:･ﾟ✧\(◕ヮ◕\) 	 *"
+	echo "*		source code: https://github.com/vivz753		 	 *"
+	echo "*									 *"
+	echo "**************************************************************************"
+	echo
+	echo "Follow the instructions below to integrate with Git:"
+	echo
 	echo "1. Copy paste the SSH key, print the public key with this command"
+	echo
 	echo "   cat ~/.ssh/"$2".pub"
-	echo "\n2. Run this command to add the SSH key to SSH agent"
+	echo
+	echo "2. Run this command to add the SSH key to SSH agent"
+	echo
 	echo "   ssh-add -K ~/.ssh/"$2""
-	echo "\n3. Add this to ~/.ssh/config \n"
-	echo "Host *"
-	echo "  AddKeysToAgent yes"
-	echo "  Identity File ~/.ssh/"$2""
+	echo
+	echo "3. Add this to ~/.ssh/config "
+	echo
+	echo "	Host *"
+	echo "  	AddKeysToAgent yes"
+	echo "  	Identity File ~/.ssh/"$2""
 	echo
 	
 fi
