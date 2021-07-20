@@ -1,5 +1,6 @@
 // To enable these keybindings, place this file in ~/.config/Code/User/keybindings.json
 // Or copy them to your existing ~/.config/Code/User/keybindings.json
+// Or symlink them `ln -s ~/dev/vivz753/tools/VSCode/keybindings.json ~/.config/Code/User/keybindings.json` or `ln -s ~/dev/vivz753/tools/VSCode/keybindings.json /Users/vleung/Library/Application\ Support/Code/User/keybindings.json` (check your VSCode location for keybindings.json) 
 [    
   {
       "key": "ctrl+f7",
@@ -11,8 +12,7 @@
       "command": "workbench.action.files.saveAll"
   },
   {
-      "key": "alt+meta+down",
-      "command": "editor.action.copyLinesDownAction",
+      "key": "alt+meta+down", "command": "editor.action.copyLinesDownAction",
       "when": "editorTextFocus && !editorReadonly"
   },
   {
