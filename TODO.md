@@ -1,6 +1,8 @@
 - [x] apply VS code bindings
 - [x] create github SSH keys
-- allow control from personal Mac
+- [x] edit git comitter username/email `git config --global --edit`
+- [x] add git lg alias
+- [ ] allow control from personal Mac
 - [x] clone repos 
 - [X] install npm/node
 - [x] install homebrew (Mac only)
