@@ -1,0 +1,8 @@
+- [x] apply VS code bindings
+- [x] create github SSH keys
+- allow control from personal Mac
+- [x] clone repos 
+- [X] install npm/node
+- [x] install homebrew (Mac only)
+- [x] add ninja bookmarks buttons
+- [x] install VSCode extensions: GitLens, Vim, Intellisense, etc.
