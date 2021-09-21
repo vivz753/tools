@@ -47,7 +47,7 @@
       "command": "workbench.action.newGroupRight"
   },
   {
-      "key": "ctrl+h",
+      "key": "ctrl+cmd+left",
       "command": "workbench.action.focusLeftGroup"
   },
   {
@@ -247,7 +247,7 @@
   "command": "workbench.action.moveEditorRightInGroup"
 },
 {
-  "key": "ctrl+l",
+  "key": "ctrl+cmd+right",
   "command": "workbench.action.focusRightGroup"
 },
 {
@@ -276,19 +276,19 @@
   "when": "editorFocus"
 },
 {
-  "key": "ctrl+shift+l",
+  "key": "ctrl+shift+cmd+right",
   "command": "workbench.action.moveActiveEditorGroupRight"
 },
 {
-  "key": "ctrl+shift+h",
+  "key": "ctrl+shift+cmd+left",
   "command": "workbench.action.moveActiveEditorGroupLeft"
 },
 {
-  "key": "ctrl+shift+cmd+h",
+  "key": "ctrl+shift+cmd+[",
   "command": "workbench.action.moveEditorToLeftGroup"
 },
 {
-  "key": "ctrl+shift+cmd+l",
+  "key": "ctrl+shift+cmd+]",
   "command": "workbench.action.moveEditorToRightGroup"
 },
 {
@@ -318,10 +318,6 @@
 {
   "key": "cmd+s",
   "command": "-workbench.action.files.save"
-},
-{
-  "key": "cmd+s",
-  "command": "workbench.action.openSettings"
 },
 {
   "key": "cmd+,",
@@ -363,6 +359,36 @@
   "key": "alt+cmd+down",
   "command": "-editor.action.insertCursorBelow",
   "when": "editorTextFocus"
+},
+{
+  "key": "ctrl+shift+cmd+left",
+  "command": "-editor.action.smartSelect.shrink",
+  "when": "editorTextFocus"
+},
+{
+  "key": "ctrl+shift+cmd+right",
+  "command": "-editor.action.smartSelect.expand",
+  "when": "editorTextFocus"
+},
+{
+  "key": "cmd+s",
+  "command": "workbench.action.files.saveAs"
+},
+{
+  "key": "shift+cmd+s",
+  "command": "-workbench.action.files.saveAs"
+},
+{
+  "key": "ctrl+cmd+left",
+  "command": "-workbench.action.moveEditorToPreviousGroup"
+},
+{
+  "key": "ctrl+cmd+right",
+  "command": "-workbench.action.moveEditorToNextGroup"
+},
+{
+  "key": "alt+n",
+  "command": "explorer.newFolder"
 },
 
 ]
