@@ -75,6 +75,10 @@ then
 fi
 }
 
+#bash tab completion, install pkg below if not working
+# `brew install git bash-completion`
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+
 #variables
 UUID="`uuidgen | tr  '[:lower:]-' '[:upper:]_'`"
 
