@@ -1,4 +1,3 @@
-# For MacOS ONLY
 # By Vivian Leung
 # Created August 2020
 
@@ -36,10 +35,17 @@ then
 	echo
 	echo "3. (This step might not be needed; I had to remove the config file for it to work, for some reason) Add this to ~/.ssh/config "
 	echo
-	echo "	Host *"
-	echo "  	AddKeysToAgent yes"
-	echo "  	Identity File ~/.ssh/"$2""
+	echo "    Host *"
+	echo "      AddKeysToAgent yes"
+	echo "      Identity File ~/.ssh/"$2""
 	echo
+  echo  
+  echo "  As of 2021 12-9 MacOS Monterey, the above breaks git pull/push. Use the below for .ssh/config so that MacOS remembers to use SSH keys per reboot"
+  echo
+  echo "    Host *"
+  echo "      AddKeysToAgent yes"
+  echo "      UseKeychain yes"
+  echo
 	
 fi
 }
