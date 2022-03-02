@@ -47,7 +47,7 @@
       "command": "workbench.action.newGroupRight"
   },
   {
-      "key": "ctrl+h",
+      "key": "cmd+h",
       "command": "workbench.action.focusLeftGroup"
   },
   {
@@ -69,14 +69,6 @@
   {
       "key": "ctrl+k ctrl+up",
       "command": "-workbench.action.focusAboveGroup"
-  },
-  {
-      "key": "ctrl+shift+alt+pagedown",
-      "command": "workbench.action.moveEditorToNextGroup"
-  },
-  {
-      "key": "ctrl+alt+right",
-      "command": "-workbench.action.moveEditorToNextGroup"
   },
   {
       "key": "ctrl+shift+alt+pageup",
@@ -118,18 +110,8 @@
       "command": "search.action.focusSearchList"
   },
   {
-      "key": "shift+cmd+l",
-      "command": "search.action.focusNextSearchResult",
-      "when": "hasSearchResult"
-  },
-  {
       "key": "f4",
       "command": "-search.action.focusNextSearchResult",
-      "when": "hasSearchResult"
-  },
-  {
-      "key": "shift+cmd+h",
-      "command": "search.action.focusPreviousSearchResult",
       "when": "hasSearchResult"
   },
   {
@@ -276,19 +258,19 @@
   "when": "editorFocus"
 },
 {
-  "key": "ctrl+shift+l",
+  "key": "shift+cmd+l",
   "command": "workbench.action.moveActiveEditorGroupRight"
 },
 {
-  "key": "ctrl+shift+h",
+  "key": "shift+cmd+h",
   "command": "workbench.action.moveActiveEditorGroupLeft"
 },
 {
-  "key": "ctrl+shift+cmd+h",
+  "key": "ctrl+shift+h",
   "command": "workbench.action.moveEditorToLeftGroup"
 },
 {
-  "key": "ctrl+shift+cmd+l",
+  "key": "ctrl+shift+l",
   "command": "workbench.action.moveEditorToRightGroup"
 },
 {
@@ -364,5 +346,41 @@
   "command": "-editor.action.insertCursorBelow",
   "when": "editorTextFocus"
 },
-
+{
+  "key": "cmd+enter",
+  "command": "workbench.action.focusActiveEditorGroup"
+},
+{
+  "key": "cmd+k cmd+left",
+  "command": "-workbench.action.focusLeftGroup"
+},
+{
+  "key": "ctrl+h",
+  "command": "workbench.action.focusLeftGroup"
+},
+{
+  "key": "cmd+l",
+  "command": "workbench.action.focusRightGroup"
+},
+{
+  "key": "cmd+k cmd+right",
+  "command": "-workbench.action.focusRightGroup"
+},
+{
+  "key": "shift+cmd+j",
+  "command": "-workbench.action.search.toggleQueryDetails",
+  "when": "inSearchEditor || searchViewletFocus"
+},
+{
+  "key": "shift+cmd+n",
+  "command": "-workbench.action.newWindow"
+},
+{
+  "key": "shift+cmd+n",
+  "command": "welcome.showNewFileEntries"
+},
+{
+  "key": "ctrl+alt+cmd+n",
+  "command": "-welcome.showNewFileEntries"
+}
 ]

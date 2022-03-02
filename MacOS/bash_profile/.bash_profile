@@ -4,6 +4,11 @@
 # Make a symlink from [GIT] ~/dev/vivz753/tools/MacOS/bash_profile/.bashprofile to [LOCAL] ~/.bash_profile
 # EXAMPLE: `ln -s ~/dev/vivz753/tools/MacOS/bash_profile/.bash_profile ~/.bash_profile`
 
+# If Javascript engine is crashing on npm start, change the memory
+# export NODE_OPTIONS="--max-old-space-size=8192"
+# If SSH keys are not working for Git, use this command
+# `ssh-add --apple-use-keychain ~/.ssh/id_rsa`
+
 # Generate a ssh key in ~/.ssh
 function sshgen {
 	if (($# != 2))
@@ -45,6 +50,11 @@ then
   echo "    Host *"
   echo "      AddKeysToAgent yes"
   echo "      UseKeychain yes"
+  echo
+  echo "  Might also need to run upon startup:"
+  echo
+  echo "    ssh-add --apple-use-keychain ~/.ssh/$2"
+  echo
   echo
 	
 fi
@@ -114,6 +124,8 @@ alias avf="cd ~/dev/av/gatsby-client"
 alias pom="cd ~/dev/pom"
 alias inf="cd ~/dev/infor"
 alias ewc="cd ~/dev/infor/enterprise-wc"
+alias coin="cd ~/dev/coinvise"
+alias cco="cd ~/dev/coinvise/coinvise.co"
 
 #file access
 alias bashp="vi ~/.bash_profile"
@@ -123,6 +135,7 @@ alias sshconfig="vi ~/.ssh/config"
 alias getid="uuidgen | tr  '[:lower:]-' '[:upper:]_'"
 
 #git shortcuts
+alias yc='yarn commit' # this is for using commitizen
 alias gl='git lg'
 alias gr='git rebase'
 alias gs='git status'
@@ -133,6 +146,7 @@ alias gc='git checkout'
 alias gb='git branch'
 alias gcm='git commit -m'
 alias gp='git push'
+alias gpf='git push --force-with-lease'
 alias ga.='git add .'
 alias ga='git add'
 alias gpum='git pull upstream main'
