@@ -6,8 +6,10 @@
 
 # If Javascript engine is crashing on npm start, change the memory
 # export NODE_OPTIONS="--max-old-space-size=8192"
+
 # If SSH keys are not working for Git, use this command
 # `ssh-add --apple-use-keychain ~/.ssh/id_rsa`
+# `ssh-add -K ~/.ssh/id_rsa`
 
 # Generate a ssh key in ~/.ssh
 function sshgen {
