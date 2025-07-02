@@ -12,6 +12,9 @@
 # `ssh-add -K ~/.ssh/id_rsa`
 
 # Generate a ssh key in ~/.ssh
+
+export PATH="$PATH:$HOME/bin:$HOME/go/bin"
+
 function sshgen {
 	if (($# != 2))
 then
