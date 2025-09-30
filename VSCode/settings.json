@@ -7,7 +7,7 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "prettier.jsxBracketSameLine": true,
+  "prettier.bracketSameLine": true,
   "prettier.requireConfig": true,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
